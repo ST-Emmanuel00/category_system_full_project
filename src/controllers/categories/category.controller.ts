@@ -29,3 +29,13 @@ export const deleteCategory: ExpressController = async (req, res, next) => {
         next(error)
     }
 };
+
+export const updateCategory: ExpressController = async (req, res, next) => {
+    try {
+        const { id } = req.params
+        const body = req.body
+        res.status(200).json(await categoriesServices.updateCategory(id, body));
+    } catch (error: any) {
+        next(error)
+    }
+};

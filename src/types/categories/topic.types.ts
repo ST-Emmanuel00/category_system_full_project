@@ -1,4 +1,4 @@
-import { CreateCategory } from "./create.category.types";
+import { CreateCategory } from "./category.types";
 
 export interface createTopic extends CreateCategory {
 

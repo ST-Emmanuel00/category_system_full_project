@@ -18,3 +18,4 @@ export const deleteTopic: ExpressController = async (req, res, next) => {
         next(error)
     }
 };
+

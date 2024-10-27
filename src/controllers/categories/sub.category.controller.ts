@@ -20,3 +20,12 @@ export const deleteSubCategory: ExpressController = async (req, res, next) => {
     }
 };
 
+export const updateSubCategory: ExpressController = async (req, res, next) => {
+    try {
+        const { id } = req.params
+        const body = req.body
+        res.status(200).json(await subCategoriesServices.updateSubCategory(id, body));
+    } catch (error: any) {
+        next(error)
+    }
+};

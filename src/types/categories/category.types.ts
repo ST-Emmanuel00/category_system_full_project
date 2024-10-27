@@ -4,3 +4,5 @@ export interface CreateCategory {
     description?: string
     
 }
+
+export type UpdateCategory = Partial<CreateCategory>;
