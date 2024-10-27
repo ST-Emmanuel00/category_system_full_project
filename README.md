@@ -7,7 +7,7 @@ Este es el repositorio para el proyecto **Category system 🗃️**, una aplicac
 ## Postman documentacion - API
 
 ```bash
-https://documenter.getpostman.com/view/39094407/2sAY4sk543t 
+https://documenter.getpostman.com/view/39094407/2sAY4sk543
 ```
 
 ## Stack backend
