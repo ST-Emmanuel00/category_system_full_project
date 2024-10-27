@@ -1,15 +1,16 @@
 {
-  "name": "tectest",
+  "name": "CS",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "seed:test": "dotenv -e .env.test npx ts-node-dev ./seed/seed.ts",
     "seed:dev": "dotenv -e .env.dev npx ts-node-dev ./seed/seed.ts",
     "seed:prod": "dotenv -e .env npx ts-node-dev ./seed/seed.ts",
     "test:integrations": "jest tests/integrations",
     "test": "dotenv -e .env.test jest",
     "test:watch": "jest --env-file=.env.test --watch",
-    "test:coverage": "rimraf ./coverage && npm run test --coverage",
+    "test:coverage": "npx dotenv -e .env.test jest --coverage",
     "migrate:prod": "dotenv -e .env -- npx prisma db push --schema=./prisma/schema.prisma",
     "migrate:dev": "dotenv -e .env.dev -- npx prisma db push --schema=./prisma/schema.prisma",
     "build": "rimraf ./dist && tsc",
