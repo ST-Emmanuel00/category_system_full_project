@@ -1,6 +1,6 @@
 import { db } from "../../config";
 import { AsyncCustomResponse, createSubcategory } from "../../types";
-import { AppError } from 'utils';
+import { AppError } from '../../utils';
 
 export const addNewSubCategory = async (body: createSubcategory): AsyncCustomResponse => {
     try {

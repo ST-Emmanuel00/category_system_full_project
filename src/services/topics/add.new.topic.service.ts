@@ -1,6 +1,6 @@
-import { AppError } from "utils";
 import { db } from "../../config";
-import { AsyncCustomResponse, createTopic,  } from "../../types";
+import { AppError } from "../../utils";
+import { AsyncCustomResponse, createTopic  } from "../../types";
 
 export const addNewTopic = async (body: createTopic): AsyncCustomResponse => {
     try {
