@@ -1,0 +1,8 @@
+dist
+node_modules
+coverage
+
+.env
+.env.dev
+.env.test
+

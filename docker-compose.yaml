@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+
+  db-development:
+    container_name: dev_nordb_category_system
+    restart: always
+    image: mongo:6.0  
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: devCategorySystemUser
+      MONGO_INITDB_ROOT_PASSWORD: devCategorySystemPass
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-development-data:/data/db
+
+  
+volumes:
+  db-development-data:
+    external: false
+  # db-testing-data:
+  #   external: false
