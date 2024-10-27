@@ -1,7 +1,7 @@
-import { api } from "../jest.setup";
+import { api } from "../../jest.setup";
 
-describe("Category Test", () => {
-    test("Get all categories...[!]", async () => {
+describe("Get all categories", () => {
+    test("Get all categories success...[!]", async () => {
 
       const response = await api.get("/api/categories/");
       expect(response.status).toBe(200);

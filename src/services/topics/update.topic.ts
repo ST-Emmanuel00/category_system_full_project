@@ -1,7 +1,8 @@
-import { AsyncCustomResponse } from "types";
-import { body } from 'express-validator';
+import { AppError } from "../../utils";
+import { db } from "../../config";
+import { AsyncCustomResponse, UpdateTopic } from "../../types";
 
-export const updateTopic = async (id: string, body: Update): AsyncCustomResponse => {
+export const updateTopic = async (id: string, body: UpdateTopic): AsyncCustomResponse => {
     try {
 
         const topic = await db.topic.findFirst({

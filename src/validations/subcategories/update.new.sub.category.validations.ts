@@ -6,8 +6,8 @@ export const updateSubcategoryValidations = [
 
     body("categoryId")
         .optional()
-        .isUUID()
-        .withMessage("The categoryId must be a valid UUID"),
+        .matches(/^[0-9a-fA-F]{24}$/)
+        .withMessage("The ID must be a valid MongoDB ObjectID"),
 
     body("name")
         .optional()
