@@ -6,15 +6,15 @@
   "scripts": {
     "seed:test": "dotenv -e .env.test npx ts-node-dev ./seed/seed.ts",
     "seed:dev": "dotenv -e .env.dev npx ts-node-dev ./seed/seed.ts",
-    "seed:prod": "dotenv -e .env npx ts-node-dev ./seed/seed.ts",
+    "seed:prod": "node ./dist/seed/seed.js",
     "test:integrations": "jest tests/integrations",
     "test": "dotenv -e .env.test jest",
     "test:watch": "jest --env-file=.env.test --watch",
     "test:coverage": "npx dotenv -e .env.test jest --coverage",
-    "migrate:prod": "dotenv -e .env -- npx prisma db push --schema=./prisma/schema.prisma",
+    "migrate:prod": "npx prisma db push --schema=./prisma/schema.prisma",
     "migrate:dev": "dotenv -e .env.dev -- npx prisma db push --schema=./prisma/schema.prisma",
     "build": "rimraf ./dist && tsc",
-    "start:prod": "node --env-file=.env ./dist/main.js",
+    "start:prod": "node ./dist/src/main.js",
     "start:dev": "npx ts-node-dev --env-file=.env.dev ./src/main.ts"
   },
   "keywords": [],

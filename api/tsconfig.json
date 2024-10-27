@@ -1,7 +1,8 @@
 {
   "include": [
     "src/**/*",
-  ],
+    "seed/**/*"
+, "seed"  ],
   "exclude": [
     "coverage",
     "node_modules",

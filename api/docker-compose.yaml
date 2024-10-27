@@ -2,6 +2,14 @@ version: "3"
 
 services:
 
+  api:
+    container_name: category_system
+    restart: always
+    image: cs:v1.3
+    env_file:
+      - .env
+    ports:
+      - "8000:8080"
 
   db-development:
     container_name: dev_nordb_category_system

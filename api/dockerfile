@@ -51,6 +51,7 @@ COPY --from=production-dependencies /CS/node_modules /CS/node_modules
 COPY --from=build /CS/dist /CS/dist
 COPY --from=build /CS/prisma /CS/prisma
 COPY --from=build /CS/package.json /CS/package.json
+COPY --from=build /CS/seed /CS/seed
 
 # Establecer el entorno de producción
 ENV NODE_ENV=production
