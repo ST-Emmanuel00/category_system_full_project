@@ -1,3 +1,4 @@
 import { errorHandler } from './error.handler.middleware';
 import { limiter } from './limiter.middleware';
-export {errorHandler, limiter}
+import { validationResults } from './validations.result.middleware';
+export { errorHandler, validationResults, limiter }

@@ -13,7 +13,7 @@ export const createNewTopic: ExpressController = async (req, res, next) => {
 export const deleteTopic: ExpressController = async (req, res, next) => {
     try {
         const { id } = req.params
-        res.status(201).json(await topicServices.removeTopic(id));
+        res.status(200).json(await topicServices.removeTopic(id));
     } catch (error: any) {
         next(error)
     }

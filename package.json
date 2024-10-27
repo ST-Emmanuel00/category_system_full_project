@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "seed:dev": "dotenv -e .env.dev npx ts-node-dev ./seed/seed.ts",
+    "seed:prod": "dotenv -e .env npx ts-node-dev ./seed/seed.ts",
     "test:integrations": "jest tests/integrations",
     "test": "dotenv -e .env.test jest",
     "test:watch": "jest --env-file=.env.test --watch",
     "test:coverage": "rimraf ./coverage && npm run test --coverage",
+    "migrate:prod": "dotenv -e .env -- npx prisma db push --schema=./prisma/schema.prisma",
     "migrate:dev": "dotenv -e .env.dev -- npx prisma db push --schema=./prisma/schema.prisma",
     "build": "rimraf ./dist && tsc",
     "start:prod": "node --env-file=.env ./dist/main.js",
@@ -37,6 +39,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "express-rate-limit": "^7.4.1",
+    "express-validator": "^7.2.0",
     "joi": "^17.13.3"
   }
 }

@@ -1,2 +1,2 @@
-import { AppError } from './common/AppError';
+import { AppError } from './common/AppError.utils';
 export { AppError }

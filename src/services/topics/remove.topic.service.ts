@@ -1,4 +1,3 @@
-import { name } from './../../../node_modules/ci-info/index.d';
 import { db } from "../../config";
 import { AsyncCustomResponse } from "../../types";
 import { AppError } from "../../utils";

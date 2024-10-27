@@ -1,9 +1,10 @@
 import { Router } from "express";
 import { categoryControllers } from "../../controllers";
+import { categoriesValidations, commonValidations } from "../../validations";
 
 const categoryRoutes = Router();
 categoryRoutes.get("/", categoryControllers.getAllCategories);
-categoryRoutes.post("/", categoryControllers.createNewCategorie );
-categoryRoutes.delete("/:id", categoryControllers.deleteCategory );
+categoryRoutes.post("/", categoriesValidations.createCategoryValidations,  categoryControllers.createNewCategorie);
+categoryRoutes.delete("/:id", commonValidations.paramsValidations, categoryControllers.deleteCategory);
 
 export default categoryRoutes
